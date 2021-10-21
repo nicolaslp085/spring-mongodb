@@ -18,7 +18,7 @@ class HttpRequestTest {
     @LocalServerPort
     private int port;
     
-    //@Test
+    @Test
     public void testSaludoPorDefecto() throws Exception {
         assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/api/hola",
                 String.class)).contains("Hola Mundo!");
