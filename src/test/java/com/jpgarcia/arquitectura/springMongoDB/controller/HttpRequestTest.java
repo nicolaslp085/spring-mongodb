@@ -1,4 +1,4 @@
-package com.jpgarcia.arquitectura.springMongoDB;
+package com.jpgarcia.arquitectura.springMongoDB.controller;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
