@@ -24,6 +24,10 @@ public class Bike implements Serializable{
 		this.longitud = longitud;
 	}
 	
+	public Bike() {
+		
+	}
+	
 	public String getId() {
 		return id;
 	}

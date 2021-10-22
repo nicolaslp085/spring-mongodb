@@ -4,15 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import com.jpgarcia.arquitectura.springmongodb.entity.Bike;
 
 @Service
 public class BikeService {
 	
-	public String saveBike(@RequestBody Bike bike) {
+	public String saveBike() {
 		
 		return "Bike added successfully";
 	}
@@ -30,15 +28,15 @@ public class BikeService {
 	}
 	
 	
-	public Bike getBike(@PathVariable String id){
+	public Bike getBike(String id){
 		Bike bike1 = new Bike("1", "Negro", "Ruta", "234234", "234324");
 		return bike1;
 	}
 	
 	
-	public String deleteBike(@PathVariable String id) {
+	public String deleteBike(String id) {
 		
-		return "Deleted Bike Successfully : " + id;
+		return "Deleted Bike Successfully";
 	}
 
 }
