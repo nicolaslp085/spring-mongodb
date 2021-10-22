@@ -1,4 +1,4 @@
-package com.jpgarcia.arquitectura.springMongoDB;
+package com.jpgarcia.arquitectura.springmongodb;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
