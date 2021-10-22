@@ -2,13 +2,11 @@ package com.jpgarcia.arquitectura.springmongodb.entity;
 
 import java.io.Serializable;
 
-import org.springframework.data.annotation.Id;
 
 public class Bike implements Serializable{
 
 	private static final long serialVersionUID = -2646530418139639977L;
 	
-	@Id
 	String id;
 	String color;
 	String modelo;
