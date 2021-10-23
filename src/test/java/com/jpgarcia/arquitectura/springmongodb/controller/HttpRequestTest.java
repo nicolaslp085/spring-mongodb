@@ -37,8 +37,11 @@ class HttpRequestTest {
     @Test
     public void testFindBike() throws Exception {
     	
-    	assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/api/findBike/1",
-                String.class)).contains("Ruta");
+    	ResponseEntity<Bike> response =
+  			  restTemplate.getForEntity(
+  			  "http://localhost:" + port + "/api/findBike/1",
+  			  Bike.class);
+  			Bike bike = response.getBody();
         
         
     }
