@@ -31,8 +31,8 @@ public class BikeController {
 	}
 	
 	@GetMapping("/findBike/{id}")
-	public String getBike(@PathVariable String id){
-		return bikeService.getBike(id).getModelo();
+	public Bike getBike(@PathVariable String id){
+		return bikeService.getBike(id);
 	}
 	
 	@GetMapping("/deleteBike/{id}")

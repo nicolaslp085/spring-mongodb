@@ -9,6 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
+import org.springframework.http.ResponseEntity;
 
 import com.jpgarcia.arquitectura.springmongodb.entity.Bike;
 
@@ -52,7 +53,7 @@ class HttpRequestTest {
     }
     
     @Test
-    public void testaddBike() throws Exception {
+    public void testAddBike() throws Exception {
     	
     	assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/api/addBike",
                 String.class)).contains("Bike added successfully");
@@ -60,8 +61,17 @@ class HttpRequestTest {
         
     }
     
-    
-   
+    @Test
+    public void testFindAllBikes() throws Exception {
+    	
+    	ResponseEntity<Bike[]> response =
+    			  restTemplate.getForEntity(
+    			  "http://localhost:" + port + "/api/findAllBikes",
+    			  Bike[].class);
+    			Bike[] bikes = response.getBody();
+        
+        
+    }
 
 
 }
